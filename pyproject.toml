@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skillseal"
+version = "0.1.0"
+description = "Local integrity manifests for AI agent skill bundles"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Califi Mwarabu" }]
+keywords = ["agent-skills", "integrity", "sha256", "supply-chain", "provenance"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Security",
+]
+dependencies = []
+
+[project.scripts]
+skillseal = "skillseal.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
